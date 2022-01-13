@@ -1,0 +1,249 @@
+:root {
+  --primary: #3a627b;
+  --secondary: #1e293b;
+}
+
+// @font-face {
+//   font-family: "iransans";
+//   font-style: bold;
+//   font-weight: bold;
+//   src: url("../../../public/assets/fonts/IRANSans.eot");
+//   src: url("../../../public/assets/fonts/IRANSans.eot#iefix")
+//       format("embedded-opentype"),
+//     url("../../../public/assets/fonts/IRANSans.woff") format("woff"),
+//     url("../../../public/assets/fonts/IRANSans.ttf") format("truetype");
+// }
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../../../public/assets/fonts/NotoSans.eot");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../../../public/assets/fonts/NotoSans-Bold.eot");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+main {
+  min-height: calc(100vh - 106px);
+  height: auto;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+  font-weight: 400 !important;
+  font-family: NotoSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #f1f5f9;
+}
+
+body {
+  &.open {
+    .body-wrapper {
+      right: 0;
+      //padding-right: 360px;
+      transition: all ease 0.4s;
+      transition-delay: 0.2s;
+    }
+  }
+}
+input {
+  background-color: transparent;
+}
+input,
+textarea,
+button {
+  &:focus {
+    outline: none !important;
+    border-color: inherit !important;
+    box-shadow: inherit !important;
+  }
+}
+*::-webkit-scrollbar {
+  background-color: #fff;
+  width: 12px;
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.bg-primary {
+  background-color: var(--primary);
+}
+.txt-primary,
+.text-primary {
+  color: var(--primary);
+}
+.bg-darkBlue {
+  background-color: $darkBlue;
+}
+/* background of the scrollbar except button or resizer */
+*::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* scrollbar itself */
+*::-webkit-scrollbar-thumb {
+  background-color: #d4d8df;
+  // border-radius: 16px;
+  border: 2px solid #fff;
+}
+
+/* set button(top and bottom of the scrollbar) */
+*::-webkit-scrollbar-button {
+  display: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.bg-neutral {
+  background-color: #fafafa;
+}
+.table-title-text {
+  color: #141414;
+}
+.loading-dots {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 12px 0 #00000022, -12px 0 #fff;
+  animation: loading-dots 1s infinite linear alternate;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ripple-button {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  > .content {
+    position: relative;
+    z-index: 2;
+  }
+  > .ripple {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #63a4ff;
+    display: block;
+    content: "";
+    border-radius: 9999px;
+    opacity: 1;
+    animation: 0.8s linear 1 forwards ripple-effect;
+  }
+}
+.ql-editor {
+  direction: rtl;
+  text-align: right;
+  height: 200px;
+  overflow-y: auto;
+}
+.ql-toolbar {
+  .ql-formats {
+    .ql-picker-label {
+      text-align: left;
+    }
+  }
+}
+.dashed-border {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='lightgray' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='16' stroke-linecap='round'/%3e%3c/svg%3e");
+}
+.flb-input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+
+  &:focus,
+  &.active {
+    ~ .flb-label {
+      top: -10px;
+      right: 5px;
+      transform: scale(0.8);
+    }
+    ~ .flb-border {
+      width: 100%;
+    }
+  }
+}
+.flb-border {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  top: 100%;
+  right: 0px;
+  background: linear-gradient(120deg, #3498db, #8e44ad);
+  transition: 0.5s;
+}
+.flb-label {
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  color: #1e293b;
+  font-size: 12px;
+  pointer-events: none;
+  transition: all ease 0.3s;
+  top: -10px;
+  right: 5px;
+  transform: scale(0.8);
+}
+
+.main-container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.close-menu {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  color: #f30613;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    &:before,
+    &:after {
+      background-color: #4d4d4d;
+    }
+  }
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    top: 10px;
+    right: 6px;
+    transform: rotate(45deg);
+    background-color: #f30613;
+    transition: all ease 0.4s;
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+.section-title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  letter-spacing: 8px;
+  font-weight: bolder;
+  line-height: 1.5;
+  color: #3c3b3b;
+}
