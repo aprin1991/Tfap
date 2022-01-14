@@ -35,3 +35,123 @@
     }
   }
 }
+
+.popup-img {
+  background-color: #3a627b;
+  position: relative;
+  &:hover {
+    img {
+      opacity: 0.7;
+    }
+    span {
+      display: block;
+      -webkit-animation: zoomIn 0.2s;
+      animation: zoomIn 0.2s;
+    }
+  }
+  img {
+    transition: all ease 0.5s;
+  }
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    margin-left: -18px;
+    margin-top: -9px;
+    font-size: 18px;
+    transition: all ease 0.5s;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 40px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    z-index: 2;
+    line-height: 30px;
+    text-align: center;
+    font-size: 28px;
+  }
+}
+.project-list {
+  li {
+    figure {
+      .popup-img {
+        margin-right: 50px;
+      }
+      figcaption {
+        // padding-left: 32px;
+      }
+    }
+    &:nth-child(2n) {
+      figure {
+        flex-direction: row-reverse;
+        .popup-img {
+          margin-left: 50px;
+          margin-right: 0;
+        }
+        figcaption {
+          // padding-right: 32px;
+          // padding-left: 0;
+        }
+      }
+    }
+  }
+}
+.introduce-frame {
+  padding-top: 130px;
+  padding-right: 8%;
+  padding-bottom: 120px;
+  padding-left: 8%;
+  margin-top: 80px;
+  margin-right: 0px;
+  margin-bottom: 80px;
+  margin-left: 0px;
+  background-image: url("../../../public/assets/images/fixed.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 0;
+  position: relative;
+}
+
+.contact-home {
+  padding-top: 60px;
+  padding-right: 0px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  background-color: #8294bc;
+  background-image: url("../../../public/assets/images/branches.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  min-height: 400px;
+  .home-contact-info {
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-bottom: 70px;
+    padding-left: 60px;
+    border-width: 1px;
+    border-color: #395466;
+    border-style: solid;
+    box-shadow: 1px 1px 5px 0px #737373;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.68);
+    border-radius: 8px;
+  }
+  .branches-title {
+    font-size: 50px;
+    color: #395466;
+    line-height: 67px;
+    font-weight: 400;
+  }
+  .branches-desc {
+    color: #395466;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 29px;
+  }
+}

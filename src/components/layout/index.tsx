@@ -8,9 +8,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Header />
       {/* <Sidebar /> */}
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
-        <main className="" style={{ backgroundColor: "rgb(246, 246, 247)" }}>
-          {children}
-        </main>
+        <main className="">{children}</main>
       </div>
       <Footer />
     </div>
