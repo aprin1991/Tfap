@@ -155,3 +155,14 @@
     line-height: 29px;
   }
 }
+.article {
+  -webkit-column-count: 2;
+  -webkit-column-width: 12em;
+  column-count: 2;
+  column-width: 12em;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  column-gap: 30px;
+  hyphens: auto;
+  text-align: justify;
+}

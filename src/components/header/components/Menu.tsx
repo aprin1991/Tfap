@@ -5,6 +5,9 @@ type IProps = {
   onClose: Function;
 };
 const Menu: React.FC<IProps> = ({ show, onClose }) => {
+  const handleclickLink = () => {
+    onClose();
+  };
   return (
     <div
       className={`fixed top-0 right-0 w-screen h-screen bg-black bg-opacity-40 menu-sidebar ${
@@ -21,29 +24,29 @@ const Menu: React.FC<IProps> = ({ show, onClose }) => {
         </div>
         <ul className="px-8 text-white text-sm">
           <li className="border-b border-gray-300">
-            <Link href="/">
-              <a> About us / projects</a>
+            <Link href="/about-us">
+              <a onClick={handleclickLink}> About us / projects</a>
             </Link>
           </li>
 
           <li className="border-b border-gray-300">
             <Link href="/">
-              <a> Products</a>
+              <a onClick={handleclickLink}> Products</a>
             </Link>
           </li>
           <li className="border-b border-gray-300">
             <Link href="/">
-              <a> Contact</a>
+              <a onClick={handleclickLink}> Contact</a>
             </Link>
           </li>
           <li className="border-b border-gray-300">
             <Link href="/">
-              <a> Imprint</a>
+              <a onClick={handleclickLink}> Imprint</a>
             </Link>
           </li>
           <li className="">
-            <Link href="/">
-              <a> Privacy</a>
+            <Link href="/privacy">
+              <a onClick={handleclickLink}> Privacy</a>
             </Link>
           </li>
         </ul>

@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     AOS.init({
       easing: "ease-out-cubic",
       once: true,
-      offset: 50,
+      offset: 0,
     });
   }, []);
   return (

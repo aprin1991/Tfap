@@ -18,7 +18,8 @@ header {
   aside {
     width: 360px;
     height: 100vh;
-    background-color: #b6b6b6;
+    // background-color: #b6b6b6;
+    background-color: var(--primary);
     position: fixed;
     right: -100%;
     top: 0;

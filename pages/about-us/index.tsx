@@ -1,7 +1,3 @@
-import React from "react";
-
-function About() {
-  return <div>about</div>;
-}
+import About from "@containers/about";
 
 export default About;
