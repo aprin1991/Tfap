@@ -10,7 +10,7 @@ type IProps = {
 const ProjectCard: React.FC<IProps> = ({ data, showPopUp }) => {
   return (
     <li className="mb-20" data-aos="fade-left">
-      <figure className="flex justify-start items-center">
+      <figure className="flex justify-start items-start">
         <div className="popup-img w-1/2">
           <img className="w-full" src={data?.src} alt="logo" />
           <span

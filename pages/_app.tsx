@@ -27,6 +27,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       easing: "ease-out-cubic",
       once: true,
       offset: 0,
+      duration: 1000,
     });
   }, []);
   return (

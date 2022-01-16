@@ -5,12 +5,12 @@ function Footer() {
     <footer>
       <ul className="bg-primary flex justify-center items-center">
         <li className="text-gray-200 hover:text-white text-base py-3 px-6 font-normal transition-all">
-          <Link href="/">
+          <Link href="/about-us">
             <a>About us / Projects</a>
           </Link>
         </li>
         <li className="text-gray-200 hover:text-white text-base py-3 px-6 font-normal transition-all">
-          <Link href="/">
+          <Link href="/products">
             <a>Products</a>
           </Link>
         </li>
@@ -25,7 +25,7 @@ function Footer() {
           </Link>
         </li>
         <li className="text-gray-200 hover:text-white text-base py-3 px-6 font-normal transition-all">
-          <Link href="/">
+          <Link href="/privacy">
             <a>Privacy</a>
           </Link>
         </li>

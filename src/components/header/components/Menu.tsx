@@ -30,7 +30,7 @@ const Menu: React.FC<IProps> = ({ show, onClose }) => {
           </li>
 
           <li className="border-b border-gray-300">
-            <Link href="/">
+            <Link href="/products">
               <a onClick={handleclickLink}> Products</a>
             </Link>
           </li>
