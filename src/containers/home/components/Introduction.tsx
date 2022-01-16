@@ -36,18 +36,18 @@ function Introduction() {
     <section className="introduce-frame">
       <div className="absolute right-0 top-0 w-full h-full bg-black bg-opacity-70 z-10" />
       <div className="main-container z-50 relative">
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid  grid-cols-1 lg:grid-cols-2 gap-8">
           <img
-            className="w-full pr-8 cursor-pointer"
+            className="w-full md:pr-8 cursor-pointer"
             src="/assets/images/test/8.jpg"
             alt="video"
             onClick={() => setShowVideoPopUp(true)}
           />
-          <div className="pt-16 pl-8">
+          <div className="pt-4 xl:pt-16 lg:pl-8">
             <h2 className="text-white text-4xl mb-8 font-semibold">
               KSP Steel (Pavlodar)
             </h2>
-            <ul className="grid grid-cols-2 gap-8 text-white">
+            <ul className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-white">
               {map(items, (el) => {
                 return (
                   <li key={el?.id}>

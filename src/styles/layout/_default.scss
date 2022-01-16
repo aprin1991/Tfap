@@ -1,5 +1,6 @@
 :root {
-  --primary: #3a627b;
+  // --primary: #3a627b;
+  --primary: #035c97;
   --secondary: #1e293b;
 }
 
@@ -205,14 +206,33 @@ input[type="number"]::-webkit-outer-spin-button {
 .main-container {
   width: 1140px;
   margin: 0 auto;
+  @include breakpoint(lg, max) {
+    @include breakpoint(md, min) {
+      width: 900px;
+    }
+  }
+  @include breakpoint(md, max) {
+    @include breakpoint(sm, min) {
+      width: 700px;
+    }
+  }
+  @include breakpoint(sm, max) {
+    width: 90%;
+  }
 }
-
+.transform-body {
+  @include breakpoint(md, min) {
+    transform: translateX(-360px);
+    transition: 0.55s;
+    transition-delay: 0.3s;
+  }
+}
 .close-menu {
   width: 25px;
   height: 25px;
   border: 1px solid #fff;
   border-radius: 100%;
-  color: #f30613;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,7 +253,7 @@ input[type="number"]::-webkit-outer-spin-button {
     top: 10px;
     right: 6px;
     transform: rotate(45deg);
-    background-color: #f30613;
+    background-color: #fff;
     transition: all ease 0.4s;
   }
   &:after {
@@ -264,5 +284,9 @@ input[type="number"]::-webkit-outer-spin-button {
   &.show {
     opacity: 1;
     pointer-events: auto;
+  }
+  @include breakpoint(xs, max) {
+    bottom: 40px;
+    right: 20px;
   }
 }

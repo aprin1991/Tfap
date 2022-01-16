@@ -17,7 +17,7 @@ function Banner() {
         alt="banner"
         className="w-full object-cover"
       />
-      <figcaption className="main-container pt-24" data-aos="fade-up">
+      <figcaption className="main-container pt-6 md:pt-24" data-aos="fade-up">
         <h2 className="banner-slogan">FeSiAl</h2>
         <div>
           <p className="text-white text-xl font-medium mb-2">

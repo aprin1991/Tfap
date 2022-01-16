@@ -54,4 +54,9 @@ header {
       right: 0;
     }
   }
+  @include breakpoint(sm, max) {
+    aside {
+      width: 100%;
+    }
+  }
 }

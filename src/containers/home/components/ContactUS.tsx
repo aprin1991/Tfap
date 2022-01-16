@@ -46,8 +46,8 @@ function ContactUS() {
   ];
   return (
     <div className="contact-home">
-      <div className="flex justify-start items-start">
-        <div className="w-1/3">
+      <div className="flex flex-wrap justify-start items-start">
+        <div className="w-full mb-12 xl:mb-0 xl:w-1/3">
           <div className="home-contact-info w-full">
             <h2 className="text-xl text-black mb-8">
               Do you have any questions? <br /> Contact us!
@@ -73,13 +73,13 @@ function ContactUS() {
             </div>
           </div>
         </div>
-        <div className="w-2/3 pl-24">
+        <div className="xl:w-2/3 xl:pl-24">
           <h6 className="branches-title">Our key partners</h6>
           <p className="branches-desc">
             We provide outstanding services with our most important partners,
             which we briefly name here.
           </p>
-          <ul className="grid grid-cols-4 gap-6 mt-24">
+          <ul className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-24">
             {map(branches, (el) => {
               return (
                 <li

@@ -19,6 +19,7 @@
       "@utils": ["src/utilities"],
       "@api/*": ["src/api/*"],
       "@api": ["src/api"],
+      "@hooks": ["src/hooks"],
       "@components/*": ["src/components/*"],
       "@containers/*": ["src/containers/*"],
       "@public/*": ["public/*"],

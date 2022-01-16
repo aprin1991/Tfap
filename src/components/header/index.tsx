@@ -2,17 +2,20 @@ import Link from "next/link";
 import { hamburgerIcon } from "@utils/svgIcons";
 import { useEffect, useRef, useState } from "react";
 import Menu from "./components/Menu";
-
-export const Header: React.FC = () => {
+interface IProps {
+  show: boolean;
+  menuToggle: Function;
+}
+export const Header: React.FC<IProps> = ({ show, menuToggle }) => {
   const containerRef = useRef(null);
   const [search, setSearch] = useState("");
-  const [showMenu, setShowMenu] = useState(false);
+
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
-    showMenu
+    show
       ? document.querySelector("body")?.classList.add("overflow-hidden")
       : document.querySelector("body")?.classList.remove("overflow-hidden");
-  }, [showMenu]);
+  }, [show]);
   const options = {
     root: null,
     threshold: 0.15,
@@ -85,7 +88,7 @@ export const Header: React.FC = () => {
               <div>
                 <span
                   className="cursor-pointer"
-                  onClick={() => setShowMenu(true)}
+                  onClick={() => menuToggle(true)}
                 >
                   {hamburgerIcon}
                 </span>
@@ -94,7 +97,6 @@ export const Header: React.FC = () => {
           </div>
         </div>
       </header>
-      <Menu show={showMenu} onClose={() => setShowMenu(false)} />
     </>
   );
 };

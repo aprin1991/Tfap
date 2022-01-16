@@ -12,12 +12,16 @@ function ProductCard() {
     setShowProjectModal(show);
   };
   return (
-    <div className="mb-20">
+    <div className="mb-8 lg:mb-20">
       <div className="main-container">
         <h2 className="sppb-addon-title mb-8">The product</h2>
-        <div className="flex justify-start items-start gap-8 mb-16">
-          <img className="w-1/2" src="/assets/images/test/12.jpg" alt="" />
-          <div className="w-1/2 article-content">
+        <div className="flex flex-col lg:flex-row justify-start items-start gap-8 mb-16">
+          <img
+            className="w-full lg:w-1/2"
+            src="/assets/images/test/12.jpg"
+            alt=""
+          />
+          <div className="w-full lg:w-1/2 article-content">
             <p>
               <strong>the ferro-silicon-aluminum alloy (FeSiAl).</strong> <br />
               The technology of ferro-silicon-aluminum smelting from high-ash

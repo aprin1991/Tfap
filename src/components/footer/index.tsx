@@ -3,7 +3,7 @@ import Link from "next/link";
 function Footer() {
   return (
     <footer>
-      <ul className="bg-primary flex justify-center items-center">
+      <ul className="bg-primary flex justify-center items-center flex-wrap">
         <li className="text-gray-200 hover:text-white text-base py-3 px-6 font-normal transition-all">
           <Link href="/about-us">
             <a>About us / Projects</a>
@@ -15,12 +15,12 @@ function Footer() {
           </Link>
         </li>
         <li className="text-gray-200 hover:text-white text-base py-3 px-6 font-normal transition-all">
-          <Link href="/">
+          <Link href="/contact-us">
             <a>Contact</a>
           </Link>
         </li>
         <li className="text-gray-200 hover:text-white text-base py-3 px-6 font-normal transition-all">
-          <Link href="/">
+          <Link href="/imprint">
             <a>Imprint</a>
           </Link>
         </li>
@@ -36,7 +36,7 @@ function Footer() {
             © ICMD Holding GmbH | Lorbeerrosenweg 10 | 30916 Isernhagen, Germany
           </span>
 
-          <span style={{ fontSize: "0.85em;" }}>
+          <span style={{ fontSize: "0.85em" }}>
             <Link href="/">
               <a target="_blank" rel="noopener noreferrer">
                 Website and maintenance: regioprint Werbemedien &amp; Verlag KG,

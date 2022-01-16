@@ -4,7 +4,7 @@ type IProps = {
   show: boolean;
   onClose: Function;
 };
-const Menu: React.FC<IProps> = ({ show, onClose }) => {
+const Sidebar: React.FC<IProps> = ({ show, onClose }) => {
   const handleclickLink = () => {
     onClose();
   };
@@ -56,4 +56,4 @@ const Menu: React.FC<IProps> = ({ show, onClose }) => {
   );
 };
 
-export default Menu;
+export default Sidebar;

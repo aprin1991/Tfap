@@ -34,6 +34,11 @@
       line-height: 1.5;
     }
   }
+  @include breakpoint(xs, max) {
+    img {
+      height: 420px;
+    }
+  }
 }
 
 .popup-img {
@@ -70,6 +75,16 @@
     text-align: center;
     font-size: 28px;
   }
+  @include breakpoint(md, max) {
+    img {
+      opacity: 0.7;
+    }
+    span {
+      display: block;
+      -webkit-animation: zoomIn 0.2s;
+      animation: zoomIn 0.2s;
+    }
+  }
 }
 .project-list {
   li {
@@ -81,19 +96,23 @@
         // padding-left: 32px;
       }
     }
-    &:nth-child(2n) {
-      figure {
-        flex-direction: row-reverse;
-        .popup-img {
-          margin-left: 50px;
-          margin-right: 0;
-        }
-        figcaption {
-          // padding-right: 32px;
-          // padding-left: 0;
+
+    @include breakpoint(md, min) {
+      &:nth-child(2n) {
+        figure {
+          flex-direction: row-reverse;
+          .popup-img {
+            margin-left: 50px;
+            margin-right: 0;
+          }
         }
       }
     }
+  }
+}
+.img-popup-body {
+  @include breakpoint(md, max) {
+    padding: 20px 50px;
   }
 }
 .introduce-frame {
@@ -111,13 +130,22 @@
   background-attachment: fixed;
   background-position: 0 0;
   position: relative;
+  @include breakpoint(sm, min) {
+    @include breakpoint(md, max) {
+      padding: 50px 8%;
+    }
+  }
+  @include breakpoint(xs, max) {
+    padding: 20px;
+    margin-bottom: 20px;
+    .main-container {
+      width: 100%;
+    }
+  }
 }
 
 .contact-home {
-  padding-top: 60px;
-  padding-right: 0px;
-  padding-bottom: 50px;
-  padding-left: 50px;
+  padding: 60px 50px 50px;
   margin-top: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
@@ -153,6 +181,12 @@
     font-size: 22px;
     font-weight: 600;
     line-height: 29px;
+  }
+  @include breakpoint(xs, max) {
+    padding: 20px;
+    .home-contact-info {
+      padding: 20px;
+    }
   }
 }
 .article {

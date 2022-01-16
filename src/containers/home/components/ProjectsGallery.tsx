@@ -6,7 +6,7 @@ type Iprops = {
 };
 const ProjectsGallery: React.FC<Iprops> = ({ images, showPopUp }) => {
   return (
-    <div className="grid grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {map(images, (image, index) => {
         return (
           <div className="popup-img w-full">
