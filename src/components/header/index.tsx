@@ -58,7 +58,7 @@ export const Header: React.FC<IProps> = ({ show, menuToggle }) => {
                     <Link href="/">
                       <a>
                         <img
-                          src="/assets/images/de_de.gif"
+                          src="/assets/images/iran.png"
                           className="border border-white"
                         />
                       </a>
